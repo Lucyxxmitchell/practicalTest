@@ -18,7 +18,6 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=128, unique=True)),
                 ('startDate', models.DateField()),
                 ('description', models.CharField(max_length=1000)),
-                ('slug', models.SlugField(unique=True)),
             ],
             options={
                 'verbose_name_plural': 'categories',

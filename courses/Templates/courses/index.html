@@ -8,12 +8,17 @@
             body{
                 background-color: yellow;
                 }
+            h1{font-size: 20px}
+            h2{font-size: 40px; font-weight: bold}
+            h3{font-size: 20px; font-weight: bold}
+            h4{font-size: 20px}
+
         </style>
     </head>
 
     <body>
         <div>
-            The list of courses provided by the GA program: <br />
+            <h1>The list of courses provided by the GA program:</h1> <br />
 
         </div>
 
@@ -21,9 +26,9 @@
             {% if categories %}
                 <ul>
                     {% for course in courses %}
-                    <li>course.title</li>
-                    <li>course.startDate</li>
-                    <li>course.description</li>
+                    <li><h2>course.title</h2></li>
+                    <li><h3>course.startDate</h3></li>
+                    <li><h4>course.description</h4></li>
                     {% endfor %}
                 </ul>
             {% else %}
