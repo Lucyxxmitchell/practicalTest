@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
+from courses import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
+    path('courses/', include('courses.urls')),
+    # the above maps any URLs starting with courses/ to be handled by courses
     path('admin/', admin.site.urls),
 ]
