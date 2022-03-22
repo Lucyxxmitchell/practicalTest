@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Courses</title>
+    </head>
+
+    <body>
+        <div>
+            The list of courses provided by the GA program: <br />
+
+        </div>
+
+        <div>
+            {% if categories %}
+                <ul>
+                    {% for course in courses %}
+                    <li>course.title</li>
+                    <li>course.startDate</li>
+                    <li>course.description</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <strong>There are no courses present.</strong>
+            {% endif %}
+        </div>
+    </body>
+</html>
